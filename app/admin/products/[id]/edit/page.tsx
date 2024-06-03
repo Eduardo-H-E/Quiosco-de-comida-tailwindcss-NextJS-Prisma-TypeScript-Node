@@ -22,7 +22,7 @@ export default async function EditProductsPage({
 }: {
   params: { id: string };
 }) {
-  const product = await getProductById(Number(params.id));
+  const product = await getProductById(+params.id);
 
   return (
     <>
