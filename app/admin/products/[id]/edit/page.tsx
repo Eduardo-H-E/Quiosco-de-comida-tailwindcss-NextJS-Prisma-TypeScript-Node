@@ -5,7 +5,7 @@ import EditProductForm from "@/components/products/EditProductForm";
 import ProductForm from "@/components/products/ProductForm";
 import GoBackButton from "@/components/ui/GoBackButton";
 
-export async function getProductById(id: number) {
+async function getProductById(id: number) {
   const product = await prisma.product.findUnique({
     where: {
       id,
